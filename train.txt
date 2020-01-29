@@ -1,0 +1,1 @@
+python style_transfer.py --train ../data/yelp/sentiment.train --dev ../data/yelp/sentiment.dev --output ../tmp/sentiment.dev --vocab ../tmp/yelp.vocab --model ../tmp/model --max_train_size 100 --max_dev_size 50

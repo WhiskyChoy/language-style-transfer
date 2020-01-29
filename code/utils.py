@@ -1,9 +1,12 @@
-import numpy as np
 import random
+
+import numpy as np
+
 
 def strip_eos(sents):
     return [sent[:sent.index('<eos>')] if '<eos>' in sent else sent
-        for sent in sents]
+            for sent in sents]
+
 
 def feed_dictionary(model, batch, rho, gamma, dropout=1, learning_rate=None):
     feed_dict = {model.dropout: dropout,
@@ -19,17 +22,21 @@ def feed_dictionary(model, batch, rho, gamma, dropout=1, learning_rate=None):
                  model.labels: batch['labels']}
     return feed_dict
 
+
 def makeup(_x, n):
     x = []
     for i in range(n):
         x.append(_x[i % len(_x)])
     return x
 
+
 def reorder(order, _x):
-    x = range(len(_x))
-    for i, a in zip(order, _x):
+    # 这里python3和python2也不一样，需要给range和zip外部套上list，因为返回的是对象
+    x = list(range(len(_x)))
+    for i, a in list(zip(order, _x)):
         x[i] = a
     return x
+
 
 # noise model from paper "Unsupervised Machine Translation Using Monolingual Corpora Only"
 def noise(x, unk, word_drop=0.0, k=3):
@@ -39,8 +46,9 @@ def noise(x, unk, word_drop=0.0, k=3):
             x[i] = unk
 
     # slight shuffle such that |sigma[i]-i| <= k
-    sigma = (np.arange(n) + (k+1) * np.random.rand(n)).argsort()
+    sigma = (np.arange(n) + (k + 1) * np.random.rand(n)).argsort()
     return [x[sigma[i]] for i in range(n)]
+
 
 def get_batch(x, y, word2id, noisy=False, min_len=5):
     pad = word2id['<pad>']
@@ -59,15 +67,16 @@ def get_batch(x, y, word2id, noisy=False, min_len=5):
         rev_x.append(padding + _sent_id[::-1])
         go_x.append([go] + sent_id + padding)
         x_eos.append(sent_id + [eos] + padding)
-        weights.append([1.0] * (l+1) + [0.0] * (max_len-l))
+        weights.append([1.0] * (l + 1) + [0.0] * (max_len - l))
 
     return {'enc_inputs': rev_x,
             'dec_inputs': go_x,
-            'targets':    x_eos,
-            'weights':    weights,
-            'labels':     y,
-            'size':       len(x),
-            'len':        max_len+1}
+            'targets': x_eos,
+            'weights': weights,
+            'labels': y,
+            'size': len(x),
+            'len': max_len + 1}
+
 
 def get_batches(x0, x1, word2id, batch_size, noisy=False):
     if len(x0) < len(x1):
@@ -89,7 +98,7 @@ def get_batches(x0, x1, word2id, batch_size, noisy=False):
     while s < n:
         t = min(s + batch_size, n)
         batches.append(get_batch(x0[s:t] + x1[s:t],
-            [0]*(t-s) + [1]*(t-s), word2id, noisy))
+                                 [0] * (t - s) + [1] * (t - s), word2id, noisy))
         s = t
 
     return batches, order0, order1

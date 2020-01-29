@@ -1,4 +1,3 @@
-
 class Accumulator(object):
     def __init__(self, div, names):
         self.div = div
@@ -18,6 +17,6 @@ class Accumulator(object):
             s += ' '
         for i in range(self.n):
             s += '%s %.2f' % (self.names[i], self.values[i])
-            if i < self.n-1:
+            if i < self.n - 1:
                 s += ', '
-        print s
+        print(s)

@@ -1,6 +1,7 @@
 import numpy as np
 from utils import strip_eos
 
+
 class Decoder(object):
 
     def __init__(self, sess, args, vocab, model):
