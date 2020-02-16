@@ -2,6 +2,8 @@ import os
 import sys
 import time
 
+from progress.bar import Bar
+
 import beam_search
 import greedy_decoding
 from accumulator import Accumulator
@@ -11,7 +13,8 @@ from options import load_arguments
 from utils import *
 from vocab import Vocabulary, build_vocab
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
+
+# os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 
 class Model(object):
@@ -206,6 +209,12 @@ def create_model(sess, args, vocab):
 
 if __name__ == '__main__':
     args = load_arguments()
+    train0 = None
+    train1 = None
+    dev0 = None
+    dev1 = None
+    test0 = None
+    test1 = None
 
     #####   data preparation   #####
     if args.train:
@@ -214,7 +223,7 @@ if __name__ == '__main__':
         print('#sents of training file 0:', len(train0))
         print('#sents of training file 1:', len(train1))
 
-        if not os.path.isfile(args.vocab):
+        if not os.path.isfile(args.vocab) or os.path.getsize(args.vocab) == 0:
             build_vocab(train0 + train1, args.vocab)
 
     vocab = Vocabulary(args.vocab, args.embedding, args.dim_emb)
@@ -229,7 +238,8 @@ if __name__ == '__main__':
         test1 = load_sent(args.test + '.1', args.max_test_size)
 
     config = tf.ConfigProto()
-    config.gpu_options.allow_growth = True
+    # config.gpu_options.allow_growth = True
+    config.gpu_options.per_process_gpu_memory_fraction = 0.835
     with tf.Session(config=config) as sess:
         model = create_model(sess, args, vocab)
 
@@ -241,6 +251,7 @@ if __name__ == '__main__':
         if args.train:
             batches, _, _ = get_batches(train0, train1, vocab.word2id,
                                         args.batch_size, noisy=True)
+            len_batches = len(batches)
             random.shuffle(batches)
 
             start_time = time.time()
@@ -255,15 +266,14 @@ if __name__ == '__main__':
 
             # gradients = Accumulator(args.steps_per_checkpoint,
             #    ['|grad_rec|', '|grad_adv|', '|grad|'])
-
+            bar = None
             for epoch in range(1, 1 + args.max_epochs):
                 print('--------------------epoch %d--------------------' % epoch)
                 print('learning_rate:', learning_rate, '  gamma:', gamma)
 
-                len_batches = len(batches)
-
+                if args.show_progress:
+                    bar = Bar('    @epoch' + str(epoch) + ': processing', max=len_batches)
                 for batch in batches:
-                    print('     epoch:', epoch, 'step:', step, 'total batches:', len_batches)
                     feed_dict = feed_dictionary(model, batch, rho, gamma,
                                                 dropout, learning_rate)
                     loss_d0, _ = sess.run([model.loss_d0, model.optimize_d0],
@@ -288,9 +298,14 @@ if __name__ == '__main__':
                     #    feed_dict=feed_dict)
                     # gradients.add([grad_rec, grad_adv, grad])
                     step += 1
+                    if args.show_progress:
+                        bar.next()
+                    # This info will cut into the output of bar,
+                    # so it should be under the scope of not_show_progress
+                    # or add a /n before it
                     if step % args.steps_per_checkpoint == 0:
-                        losses.output('step %d, time %.0fs,'
-                                      % (step, time.time() - start_time))
+                        losses.output('\n' if args.show_progress else '' + 'step %d, time %.0fs,'
+                                                                      % (step, time.time() - start_time))
                         losses.clear()
 
                         # gradients.output()
@@ -299,7 +314,7 @@ if __name__ == '__main__':
                 if args.dev:
                     dev_losses = transfer(model, decoder, sess, args, vocab,
                                           dev0, dev1, args.output + '.epoch%d' % epoch)
-                    dev_losses.output('dev')
+                    dev_losses.output('\n' if args.show_progress else ''+'dev result: ')
                     if dev_losses.values[0] < best_dev:
                         best_dev = dev_losses.values[0]
                         print('saving model...')

@@ -18,6 +18,9 @@ def load_arguments():
     argparser.add_argument('--online_testing',
                            type=bool,
                            default=False)
+    argparser.add_argument('--show_progress',
+                           type=bool,
+                           default=True)
     argparser.add_argument('--output',
                            type=str,
                            default='')

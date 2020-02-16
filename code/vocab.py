@@ -1,6 +1,6 @@
 import numpy as np
 from numpy import linalg as LA
-import _pickle as pickle
+import pickle
 from collections import Counter
 
 
@@ -37,5 +37,6 @@ def build_vocab(data, path, min_occur=5):
             word2id[word] = len(word2id)
             id2word.append(word)
     vocab_size = len(word2id)
+    # print("vocab_size is %s" % vocab_size)
     with open(path, 'wb') as f:
         pickle.dump((vocab_size, word2id, id2word), f, pickle.HIGHEST_PROTOCOL)
