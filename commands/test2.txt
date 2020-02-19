@@ -1,1 +1,1 @@
-python style_transfer.py --test ../data/chinese/sentiment.test2_cut_char --output ../tmp/sentiment.test2_cut_char --vocab ../tmp/chinese_cut_char.vocab --model ../tmp2/model_cut_char --load_model true --beam 8 --max_test_size 20
+python style_transfer.py --test ../data/chinese/sentiment.test2_cut_char --output ../tmp2/sentiment.test2_cut_char --vocab ../tmp2/chinese_cut_char.vocab --model ../tmp2/model_cut_char --load_model true --beam 8 --max_test_size 20

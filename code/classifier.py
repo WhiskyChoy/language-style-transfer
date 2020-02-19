@@ -98,6 +98,12 @@ def prepare(path, suffix=''):
 
 if __name__ == '__main__':
     args = load_arguments()
+    train_x = None
+    train_y = None
+    dev_x = None
+    dev_y = None
+    test_x = None
+    test_y = None
 
     if args.train:
         train_x, train_y = prepare(args.train)
