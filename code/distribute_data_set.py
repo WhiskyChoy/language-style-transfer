@@ -18,16 +18,30 @@ def distribute(original_file_path, distribute_dict):
 
 
 if __name__ == '__main__':
-    original_f0 = '../data/chinese/sentiment.origin2_cut_char.0'
-    train_path0 = '../data/chinese/sentiment.train2_cut_char.0'
-    dev_path0 = '../data/chinese/sentiment.dev2_cut_char.0'
-    test_path0 = '../data/chinese/sentiment.test2_cut_char.0'
+    # original_f0 = '../data/chinese/sentiment.origin2_cut_char.0'
+    # train_path0 = '../data/chinese/sentiment.train2_cut_char.0'
+    # dev_path0 = '../data/chinese/sentiment.dev2_cut_char.0'
+    # test_path0 = '../data/chinese/sentiment.test2_cut_char.0'
+    # dist_dict0 = {train_path0: 7, dev_path0: 2, test_path0: 1}
+    # distribute(original_f0, dist_dict0)
+    #
+    # original_f1 = '../data/chinese/sentiment.origin2_cut_char.1'
+    # train_path1 = '../data/chinese/sentiment.train2_cut_char.1'
+    # dev_path1 = '../data/chinese/sentiment.dev2_cut_char.1'
+    # test_path1 = '../data/chinese/sentiment.test2_cut_char.1'
+    # dist_dict1 = {train_path1: 7, dev_path1: 2, test_path1: 1}
+    # distribute(original_f1, dist_dict1)
+
+    original_f0 = '../data/chinese/sentiment.origin2_cut_word.0'
+    train_path0 = '../data/chinese/sentiment.train2_cut_word.0'
+    dev_path0 = '../data/chinese/sentiment.dev2_cut_word.0'
+    test_path0 = '../data/chinese/sentiment.test2_cut_word.0'
     dist_dict0 = {train_path0: 7, dev_path0: 2, test_path0: 1}
     distribute(original_f0, dist_dict0)
 
-    original_f1 = '../data/chinese/sentiment.origin2_cut_char.1'
-    train_path1 = '../data/chinese/sentiment.train2_cut_char.1'
-    dev_path1 = '../data/chinese/sentiment.dev2_cut_char.1'
-    test_path1 = '../data/chinese/sentiment.test2_cut_char.1'
+    original_f1 = '../data/chinese/sentiment.origin2_cut_word.1'
+    train_path1 = '../data/chinese/sentiment.train2_cut_word.1'
+    dev_path1 = '../data/chinese/sentiment.dev2_cut_word.1'
+    test_path1 = '../data/chinese/sentiment.test2_cut_word.1'
     dist_dict1 = {train_path1: 7, dev_path1: 2, test_path1: 1}
     distribute(original_f1, dist_dict1)

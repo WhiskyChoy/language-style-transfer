@@ -223,7 +223,7 @@ if __name__ == '__main__':
         print('#sents of training file 0:', len(train0))
         print('#sents of training file 1:', len(train1))
 
-        if not os.path.isfile(args.vocab) or os.path.getsize(args.vocab) == 0:
+        if args.rebuild_vocab or not os.path.isfile(args.vocab) or os.path.getsize(args.vocab) == 0:
             build_vocab(train0 + train1, args.vocab)
 
     vocab = Vocabulary(args.vocab, args.embedding, args.dim_emb)

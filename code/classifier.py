@@ -108,7 +108,7 @@ if __name__ == '__main__':
     if args.train:
         train_x, train_y = prepare(args.train)
 
-        if not os.path.isfile(args.vocab):
+        if args.rebuild_vocab or not os.path.isfile(args.vocab) or os.path.getsize(args.vocab) == 0:
             build_vocab(train_x, args.vocab)
 
     vocab = Vocabulary(args.vocab)
