@@ -304,21 +304,28 @@ if __name__ == '__main__':
                     # so it should be under the scope of not_show_progress
                     # or add a /n before it
                     if step % args.steps_per_checkpoint == 0:
-                        losses.output('\n' if args.show_progress else '' + 'step %d, time %.0fs,'
-                                                                      % (step, time.time() - start_time))
+                        # 前面的那句if else换行判断加上括号好一点
+                        losses.output(('\n' if args.show_progress else '') + 'step %d, time %.0fs,'
+                                      % (step, time.time() - start_time))
                         losses.clear()
 
                         # gradients.output()
                         # gradients.clear()
 
+                # dev默认值是空字符，是False，进入到else
                 if args.dev:
                     dev_losses = transfer(model, decoder, sess, args, vocab,
                                           dev0, dev1, args.output + '.epoch%d' % epoch)
-                    dev_losses.output('\n' if args.show_progress else ''+'dev result: ')
+                    dev_losses.output(('\n' if args.show_progress else '') + 'dev result: ')
                     if dev_losses.values[0] < best_dev:
                         best_dev = dev_losses.values[0]
-                        print('saving model...')
+                        print('saving model for a better dev check...')
                         model.saver.save(sess, args.model)
+
+                # 没有dev就每次都写如模型
+                else:
+                    print('saving model without dev check...')
+                    model.saver.save(sess, args.model)
 
                 gamma = max(args.gamma_min, gamma * args.gamma_decay)
 

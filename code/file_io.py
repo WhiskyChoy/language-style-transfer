@@ -3,7 +3,7 @@ from nltk import word_tokenize, sent_tokenize
 
 def load_doc(path):
     data = []
-    with open(path) as f:
+    with open(path, 'r', encoding='utf-8') as f:
         for line in f:
             sents = sent_tokenize(line)
             doc = [word_tokenize(sent) for sent in sents]
@@ -13,7 +13,7 @@ def load_doc(path):
 
 def load_sent(path, max_size=-1):
     data = []
-    with open(path) as f:
+    with open(path, 'r', encoding='utf-8') as f:
         for line in f:
             if len(data) == max_size:
                 break
@@ -23,7 +23,7 @@ def load_sent(path, max_size=-1):
 
 def load_vec(path):
     x = []
-    with open(path) as f:
+    with open(path, 'r', encoding='utf-8') as f:
         for line in f:
             p = line.split()
             p = [float(v) for v in p]
@@ -32,7 +32,7 @@ def load_vec(path):
 
 
 def write_doc(docs, sents, path):
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         index = 0
         for doc in docs:
             for i in range(len(doc)):
@@ -42,13 +42,13 @@ def write_doc(docs, sents, path):
 
 
 def write_sent(sents, path):
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         for sent in sents:
             f.write(' '.join(sent) + '\n')
 
 
 def write_vec(vecs, path):
-    with open(path, 'w') as f:
+    with open(path, 'w', encoding='utf-8') as f:
         for vec in vecs:
             for i, x in enumerate(vec):
                 f.write('%.3f' % x)
