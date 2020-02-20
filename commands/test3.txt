@@ -1,0 +1,1 @@
+python style_transfer.py --test ../data/chinese/sentiment.test2_cut_word --output ../tmp3/sentiment.test2_cut_word --vocab ../tmp3/chinese_cut_word.vocab --model ../tmp3/model_cut_word --load_model true --beam 8 --max_test_size 20

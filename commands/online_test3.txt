@@ -1,0 +1,1 @@
+python style_transfer.py --online_testing True --vocab ../tmp3/chinese_cut_word.vocab --model ../tmp3/model_cut_word --load_model true --beam 8

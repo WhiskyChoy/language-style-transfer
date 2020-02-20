@@ -1,0 +1,1 @@
+python style_transfer.py --train ../data/chinese/sentiment.train2_cut_word --dev ../data/chinese/sentiment.dev2_cut_word --output ../tmp3/sentiment.dev2_cut_word --vocab ../tmp3/chinese_cut_word.vocab --model ../tmp3/model_cut_word --steps_per_checkpoint 200 --max_train_size 100 --max_dev_size 50
