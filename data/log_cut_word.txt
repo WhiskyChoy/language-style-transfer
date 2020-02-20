@@ -1,0 +1,276 @@
+--------------------epoch 1--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch1: processing |#######                         | 200/905
+step 200, time 121s, loss 55.39, rec 53.30, adv 2.08, d0 1.62, d1 1.51
+?[K    @epoch1: processing |##############                  | 400/905
+step 400, time 227s, loss 49.65, rec 47.98, adv 1.67, d0 1.28, d1 1.31
+?[K    @epoch1: processing |#####################           | 600/905
+step 600, time 338s, loss 46.25, rec 44.46, adv 1.78, d0 1.26, d1 1.31
+?[K    @epoch1: processing |############################    | 800/905
+step 800, time 458s, loss 47.55, rec 45.05, adv 2.50, d0 1.20, d1 1.30
+?[K    @epoch1: processing |################################| 905/905
+dev result:  loss 40.77, rec 38.78, adv 1.98, d0 1.01, d1 1.18
+saving model for a better dev check...
+--------------------epoch 2--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch2: processing |###                             | 95/905
+step 1000, time 701s, loss 42.28, rec 40.23, adv 2.05, d0 1.12, d1 1.24
+?[K    @epoch2: processing |##########                      | 295/905
+step 1200, time 818s, loss 41.20, rec 39.17, adv 2.03, d0 1.14, d1 1.24
+?[K    @epoch2: processing |#################               | 495/905
+step 1400, time 935s, loss 39.94, rec 37.88, adv 2.06, d0 1.15, d1 1.23
+?[K    @epoch2: processing |########################        | 695/905
+step 1600, time 1056s, loss 39.49, rec 37.38, adv 2.10, d0 1.13, d1 1.21
+?[K    @epoch2: processing |############################### | 895/905
+step 1800, time 1182s, loss 39.13, rec 36.94, adv 2.18, d0 1.11, d1 1.21
+?[K    @epoch2: processing |################################| 905/905
+dev result:  loss 34.82, rec 32.83, adv 1.99, d0 1.02, d1 1.11
+saving model for a better dev check...
+--------------------epoch 3--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch3: processing |######                          | 190/905
+step 2000, time 1435s, loss 37.25, rec 35.01, adv 2.24, d0 1.09, d1 1.19
+?[K    @epoch3: processing |#############                   | 390/905
+step 2200, time 1565s, loss 36.53, rec 34.24, adv 2.30, d0 1.06, d1 1.18
+?[K    @epoch3: processing |####################            | 590/905
+step 2400, time 1693s, loss 35.91, rec 33.46, adv 2.45, d0 1.05, d1 1.28
+?[K    @epoch3: processing |###########################     | 790/905
+step 2600, time 1826s, loss 37.47, rec 35.10, adv 2.37, d0 1.03, d1 1.20
+?[K    @epoch3: processing |################################| 905/905
+dev result:  loss 33.36, rec 31.21, adv 2.15, d0 0.89, d1 1.06
+saving model for a better dev check...
+--------------------epoch 4--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch4: processing |###                             | 85/905
+step 2800, time 2086s, loss 36.04, rec 33.55, adv 2.49, d0 1.01, d1 1.13
+?[K    @epoch4: processing |##########                      | 285/905
+step 3000, time 2225s, loss 35.80, rec 33.30, adv 2.49, d0 1.00, d1 1.14
+?[K    @epoch4: processing |#################               | 485/905
+step 3200, time 2362s, loss 35.45, rec 32.86, adv 2.58, d0 0.98, d1 1.13
+?[K    @epoch4: processing |########################        | 685/905
+step 3400, time 2499s, loss 35.61, rec 33.02, adv 2.59, d0 0.99, d1 1.14
+?[K    @epoch4: processing |############################### | 885/905
+step 3600, time 2637s, loss 36.00, rec 33.32, adv 2.69, d0 0.95, d1 1.16
+?[K    @epoch4: processing |################################| 905/905
+dev result:  loss 31.58, rec 29.62, adv 1.96, d0 0.86, d1 1.02
+saving model for a better dev check...
+--------------------epoch 5--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch5: processing |######                          | 180/905
+step 3800, time 2900s, loss 34.78, rec 32.05, adv 2.73, d0 0.95, d1 1.13
+?[K    @epoch5: processing |#############                   | 380/905
+step 4000, time 3042s, loss 34.26, rec 31.54, adv 2.71, d0 0.96, d1 1.11
+?[K    @epoch5: processing |####################            | 580/905
+step 4200, time 3181s, loss 33.87, rec 31.12, adv 2.75, d0 0.95, d1 1.12
+?[K    @epoch5: processing |###########################     | 780/905
+step 4400, time 3318s, loss 36.10, rec 33.32, adv 2.78, d0 0.94, d1 1.31
+?[K    @epoch5: processing |################################| 905/905
+dev result:  loss 30.67, rec 28.59, adv 2.08, d0 0.85, d1 0.97
+saving model for a better dev check...
+--------------------epoch 6--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch6: processing |##                              | 75/905
+step 4600, time 3583s, loss 33.83, rec 31.02, adv 2.82, d0 0.91, d1 1.11
+?[K    @epoch6: processing |#########                       | 275/905
+step 4800, time 3730s, loss 35.19, rec 32.34, adv 2.85, d0 0.93, d1 1.11
+?[K    @epoch6: processing |################                | 475/905
+step 5000, time 3872s, loss 33.29, rec 30.49, adv 2.80, d0 0.93, d1 1.10
+?[K    @epoch6: processing |#######################         | 675/905
+step 5200, time 4013s, loss 34.69, rec 31.87, adv 2.82, d0 0.96, d1 1.13
+?[K    @epoch6: processing |##############################  | 875/905
+step 5400, time 4155s, loss 34.45, rec 31.53, adv 2.92, d0 0.92, d1 1.11
+?[K    @epoch6: processing |################################| 905/905
+dev result:  loss 30.41, rec 28.03, adv 2.37, d0 0.78, d1 0.92
+saving model for a better dev check...
+--------------------epoch 7--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch7: processing |######                          | 170/905
+step 5600, time 4422s, loss 34.07, rec 31.16, adv 2.91, d0 0.92, d1 1.12
+?[K    @epoch7: processing |#############                   | 370/905
+step 5800, time 4565s, loss 32.99, rec 30.09, adv 2.90, d0 0.92, d1 1.10
+?[K    @epoch7: processing |####################            | 570/905
+step 6000, time 4708s, loss 32.74, rec 29.81, adv 2.93, d0 0.92, d1 1.08
+?[K    @epoch7: processing |###########################     | 770/905
+step 6200, time 4851s, loss 35.63, rec 32.70, adv 2.93, d0 0.93, d1 1.14
+?[K    @epoch7: processing |################################| 905/905
+dev result:  loss 30.57, rec 27.82, adv 2.75, d0 0.73, d1 0.92
+--------------------epoch 8--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch8: processing |##                              | 65/905
+step 6400, time 5112s, loss 32.95, rec 29.97, adv 2.97, d0 0.92, d1 1.07
+?[K    @epoch8: processing |#########                       | 265/905
+step 6600, time 5258s, loss 34.51, rec 31.50, adv 3.02, d0 0.89, d1 1.10
+?[K    @epoch8: processing |################                | 465/905
+step 6800, time 5399s, loss 32.73, rec 29.77, adv 2.96, d0 0.92, d1 1.11
+?[K    @epoch8: processing |#######################         | 665/905
+step 7000, time 5541s, loss 33.37, rec 30.33, adv 3.04, d0 0.92, d1 1.14
+?[K    @epoch8: processing |##############################  | 865/905
+step 7200, time 5686s, loss 34.13, rec 31.08, adv 3.05, d0 0.90, d1 1.12
+?[K    @epoch8: processing |################################| 905/905
+dev result:  loss 29.89, rec 26.92, adv 2.97, d0 0.87, d1 0.96
+saving model for a better dev check...
+--------------------epoch 9--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch9: processing |#####                           | 160/905
+step 7400, time 5952s, loss 33.46, rec 30.12, adv 3.33, d0 0.97, d1 1.10
+?[K    @epoch9: processing |############                    | 360/905
+step 7600, time 6096s, loss 32.22, rec 29.23, adv 2.98, d0 0.88, d1 1.10
+?[K    @epoch9: processing |###################             | 560/905
+step 7800, time 6240s, loss 31.59, rec 28.60, adv 2.99, d0 0.90, d1 1.06
+?[K    @epoch9: processing |##########################      | 760/905
+step 8000, time 6384s, loss 34.09, rec 31.06, adv 3.03, d0 0.91, d1 1.10
+?[K    @epoch9: processing |################################| 905/905
+dev result:  loss 28.87, rec 26.67, adv 2.20, d0 0.88, d1 0.91
+saving model for a better dev check...
+--------------------epoch 10--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch10: processing |#                               | 55/905
+step 8200, time 6648s, loss 32.34, rec 29.29, adv 3.05, d0 0.93, d1 1.07
+?[K    @epoch10: processing |#########                       | 255/905
+step 8400, time 6794s, loss 33.82, rec 30.67, adv 3.15, d0 0.93, d1 1.07
+?[K    @epoch10: processing |################                | 455/905
+step 8600, time 6938s, loss 32.38, rec 29.36, adv 3.02, d0 0.92, d1 1.07
+?[K    @epoch10: processing |#######################         | 655/905
+step 8800, time 7081s, loss 31.97, rec 28.94, adv 3.04, d0 0.92, d1 1.09
+?[K    @epoch10: processing |##############################  | 855/905
+step 9000, time 7227s, loss 33.12, rec 29.93, adv 3.19, d0 0.88, d1 1.07
+?[K    @epoch10: processing |################################| 905/905
+dev result:  loss 28.73, rec 26.32, adv 2.41, d0 0.74, d1 0.88
+saving model for a better dev check...
+--------------------epoch 11--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch11: processing |#####                           | 150/905
+step 9200, time 7494s, loss 32.84, rec 29.73, adv 3.11, d0 0.89, d1 1.08
+?[K    @epoch11: processing |############                    | 350/905
+step 9400, time 7640s, loss 31.51, rec 28.55, adv 2.97, d0 0.89, d1 1.07
+?[K    @epoch11: processing |###################             | 550/905
+step 9600, time 7783s, loss 31.32, rec 28.16, adv 3.15, d0 0.89, d1 1.06
+?[K    @epoch11: processing |##########################      | 750/905
+step 9800, time 7928s, loss 32.92, rec 29.77, adv 3.15, d0 0.89, d1 1.06
+?[K    @epoch11: processing |################################| 905/905
+dev result:  loss 29.18, rec 26.44, adv 2.74, d0 0.71, d1 0.86
+--------------------epoch 12--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch12: processing |#                               | 45/905
+step 10000, time 8191s, loss 32.74, rec 29.58, adv 3.17, d0 0.90, d1 1.02
+?[K    @epoch12: processing |########                        | 245/905
+step 10200, time 8339s, loss 33.25, rec 30.07, adv 3.18, d0 0.88, d1 1.05
+?[K    @epoch12: processing |###############                 | 445/905
+step 10400, time 8485s, loss 31.79, rec 28.64, adv 3.15, d0 0.88, d1 1.03
+?[K    @epoch12: processing |######################          | 645/905
+step 10600, time 8628s, loss 31.28, rec 28.17, adv 3.11, d0 0.90, d1 1.08
+?[K    @epoch12: processing |#############################   | 845/905
+step 10800, time 8776s, loss 33.62, rec 30.41, adv 3.21, d0 0.90, d1 1.03
+?[K    @epoch12: processing |################################| 905/905
+dev result:  loss 28.12, rec 25.20, adv 2.92, d0 0.73, d1 0.79
+saving model for a better dev check...
+--------------------epoch 13--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch13: processing |####                            | 140/905
+step 11000, time 9041s, loss 32.45, rec 29.19, adv 3.26, d0 0.86, d1 1.07
+?[K    @epoch13: processing |############                    | 340/905
+step 11200, time 9187s, loss 31.16, rec 28.02, adv 3.14, d0 0.87, d1 1.04
+?[K    @epoch13: processing |###################             | 540/905
+step 11400, time 9332s, loss 30.65, rec 27.47, adv 3.18, d0 0.87, d1 1.04
+?[K    @epoch13: processing |##########################      | 740/905
+step 11600, time 9478s, loss 33.41, rec 30.21, adv 3.20, d0 0.87, d1 1.08
+?[K    @epoch13: processing |################################| 905/905
+dev result:  loss 28.30, rec 25.65, adv 2.65, d0 0.74, d1 0.78
+--------------------epoch 14--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch14: processing |#                               | 35/905
+step 11800, time 9741s, loss 31.96, rec 28.66, adv 3.30, d0 0.87, d1 1.03
+?[K    @epoch14: processing |########                        | 235/905
+step 12000, time 9891s, loss 32.96, rec 29.58, adv 3.38, d0 0.83, d1 1.02
+?[K    @epoch14: processing |###############                 | 435/905
+step 12200, time 10037s, loss 31.22, rec 27.97, adv 3.25, d0 0.87, d1 1.03
+?[K    @epoch14: processing |######################          | 635/905
+step 12400, time 10181s, loss 31.93, rec 28.47, adv 3.46, d0 0.88, d1 1.04
+?[K    @epoch14: processing |#############################   | 835/905
+step 12600, time 10325s, loss 32.09, rec 28.74, adv 3.36, d0 0.87, d1 1.04
+?[K    @epoch14: processing |################################| 905/905
+dev result:  loss 27.95, rec 25.26, adv 2.68, d0 0.69, d1 0.85
+saving model for a better dev check...
+--------------------epoch 15--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch15: processing |####                            | 130/905
+step 12800, time 10593s, loss 31.71, rec 28.38, adv 3.33, d0 0.85, d1 1.06
+?[K    @epoch15: processing |###########                     | 330/905
+step 13000, time 10739s, loss 30.46, rec 27.21, adv 3.26, d0 0.86, d1 1.03
+?[K    @epoch15: processing |##################              | 530/905
+step 13200, time 10881s, loss 30.89, rec 27.55, adv 3.34, d0 0.86, d1 1.04
+?[K    @epoch15: processing |#########################       | 730/905
+step 13400, time 11027s, loss 31.47, rec 28.21, adv 3.27, d0 0.87, d1 1.07
+?[K    @epoch15: processing |################################| 905/905
+dev result:  loss 27.96, rec 25.07, adv 2.89, d0 0.72, d1 0.90
+--------------------epoch 16--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch16: processing |                                | 25/905
+step 13600, time 11291s, loss 31.52, rec 28.22, adv 3.30, d0 0.87, d1 1.08
+?[K    @epoch16: processing |#######                         | 225/905
+step 13800, time 11439s, loss 32.77, rec 29.41, adv 3.36, d0 0.87, d1 1.04
+?[K    @epoch16: processing |###############                 | 425/905
+step 14000, time 11584s, loss 30.12, rec 26.95, adv 3.17, d0 0.87, d1 1.02
+?[K    @epoch16: processing |######################          | 625/905
+step 14200, time 11728s, loss 30.80, rec 27.46, adv 3.34, d0 0.83, d1 1.06
+?[K    @epoch16: processing |#############################   | 825/905
+step 14400, time 11876s, loss 31.83, rec 28.53, adv 3.29, d0 0.87, d1 1.03
+?[K    @epoch16: processing |################################| 905/905
+dev result:  loss 27.86, rec 25.02, adv 2.85, d0 0.71, d1 0.83
+saving model for a better dev check...
+--------------------epoch 17--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch17: processing |####                            | 120/905
+step 14600, time 12144s, loss 31.40, rec 28.06, adv 3.35, d0 0.87, d1 1.03
+?[K    @epoch17: processing |###########                     | 320/905
+step 14800, time 12290s, loss 30.69, rec 27.39, adv 3.31, d0 0.85, d1 1.02
+?[K    @epoch17: processing |##################              | 520/905
+step 15000, time 12435s, loss 30.18, rec 26.91, adv 3.27, d0 0.86, d1 1.01
+?[K    @epoch17: processing |#########################       | 720/905
+step 15200, time 12581s, loss 32.19, rec 28.87, adv 3.32, d0 0.84, d1 1.02
+?[K    @epoch17: processing |################################| 905/905
+dev result:  loss 27.19, rec 24.39, adv 2.80, d0 0.67, d1 0.76
+saving model for a better dev check...
+--------------------epoch 18--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch18: processing |                                | 15/905
+step 15400, time 12850s, loss 30.83, rec 27.51, adv 3.32, d0 0.86, d1 1.01
+?[K    @epoch18: processing |#######                         | 215/905
+step 15600, time 12999s, loss 32.26, rec 28.81, adv 3.45, d0 0.84, d1 1.01
+?[K    @epoch18: processing |##############                  | 415/905
+step 15800, time 13145s, loss 29.98, rec 26.67, adv 3.32, d0 0.85, d1 1.01
+?[K    @epoch18: processing |#####################           | 615/905
+step 16000, time 13288s, loss 30.18, rec 26.87, adv 3.31, d0 0.87, d1 1.03
+?[K    @epoch18: processing |############################    | 815/905
+step 16200, time 13434s, loss 32.14, rec 28.71, adv 3.43, d0 0.84, d1 1.03
+?[K    @epoch18: processing |################################| 905/905
+dev result:  loss 26.85, rec 23.82, adv 3.03, d0 0.65, d1 0.87
+saving model for a better dev check...
+--------------------epoch 19--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch19: processing |###                             | 110/905
+step 16400, time 13699s, loss 30.33, rec 27.00, adv 3.33, d0 0.89, d1 1.04
+?[K    @epoch19: processing |##########                      | 310/905
+step 16600, time 13846s, loss 30.29, rec 26.95, adv 3.34, d0 0.84, d1 1.01
+?[K    @epoch19: processing |##################              | 510/905
+step 16800, time 13994s, loss 30.17, rec 26.83, adv 3.34, d0 0.86, d1 1.01
+?[K    @epoch19: processing |#########################       | 710/905
+step 17000, time 14139s, loss 31.77, rec 28.49, adv 3.28, d0 0.95, d1 1.04
+?[K    @epoch19: processing |################################| 905/905
+dev result:  loss 26.56, rec 24.03, adv 2.54, d0 0.71, d1 0.84
+saving model for a better dev check...
+--------------------epoch 20--------------------
+learning_rate: 0.0005   gamma: 0.1
+?[K    @epoch20: processing |                                | 5/905
+step 17200, time 14408s, loss 30.66, rec 27.32, adv 3.34, d0 0.84, d1 0.98
+?[K    @epoch20: processing |#######                         | 205/905
+step 17400, time 14557s, loss 31.17, rec 27.77, adv 3.40, d0 0.85, d1 1.00
+?[K    @epoch20: processing |##############                  | 405/905
+step 17600, time 14704s, loss 29.79, rec 26.44, adv 3.34, d0 0.83, d1 1.01
+?[K    @epoch20: processing |#####################           | 605/905
+step 17800, time 14851s, loss 29.90, rec 26.51, adv 3.39, d0 0.87, d1 1.00
+?[K    @epoch20: processing |############################    | 805/905
+step 18000, time 15000s, loss 31.30, rec 27.93, adv 3.37, d0 0.85, d1 0.99
+?[K    @epoch20: processing |################################| 905/905
+dev result:  loss 26.23, rec 23.33, adv 2.90, d0 0.64, d1 0.79
+saving model for a better dev check...
